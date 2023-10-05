@@ -50,6 +50,9 @@ function createTodoItem(title, description) {
   todoTitle.appendChild(label);
   todoTitle.appendChild(removeTodo);
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//EVENT LISTENER
+  
   label.addEventListener("click", () => {
     todoTitle.classList.toggle("done");
     checkbox.checked = checkbox.checked;
@@ -60,8 +63,6 @@ function createTodoItem(title, description) {
   });
   return todoTitle;
 }
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//EVENT LISTENER
 todoForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.getElementById("title").value;
